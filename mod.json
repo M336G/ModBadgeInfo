@@ -1,0 +1,26 @@
+{
+	"geode": "3.3.1",
+	"gd": {
+		"win": "2.206",
+		"android": "2.206",
+		"mac": "2.206",
+		"ios": "2.206"
+	},
+	"id": "m336.modbadgeinfo",
+	"name": "Mod Badge Info",
+	"version": "v1.0.0",
+	"developer": "M336",
+	"description": "A mod that lets you click mod badges to see what they do",
+	"links": {
+		"source": "https://github.com/M336G/ModBadgeInfo"
+	},
+	"repository": "https://github.com/M336G/ModBadgeInfo",
+	"issues": {
+		"info": "Having a problem with the mod? Report the issue on the GitHub repository",
+		"url": "https://github.com/M336G/ModBadgeInfo/issues"
+	},
+	"tags": [
+		"utility",
+		"interface"
+	]
+}
