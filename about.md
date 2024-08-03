@@ -11,4 +11,5 @@ Clickable mod badges in comments will be done later on
 
 ## Credits
 [Roxi (Uproxide)](https://github.com/Uproxide) (for helping me improve/resolve problems with my code)
+
 Thanks to [immortalbean](https://github.com/immortalbean) for the logo!
