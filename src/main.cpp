@@ -12,10 +12,16 @@ class $modify(ModBadgeInfoProfilePage, ProfilePage) {
 		auto menu = static_cast<cocos2d::CCMenu*>(this->getChildByIDRecursive("username-menu"));
 
   		if (auto modBadge = static_cast<cocos2d::CCSprite*>(menu->getChildByID("mod-badge"))) {
-			m_fields->m_modState = p0->m_modBadge;
-			
+			// Delete old badge if reloaded
+			if (auto modBadgeBtnDupe = static_cast<CCMenuItemSpriteExtra*>(menu->getChildByID("m336.modbadgeinfo/mod-badge-btn"))) {
+				modBadgeBtnDupe->removeFromParentAndCleanup(true);
+				menu->updateLayout();
+			}
+
 			if (p0->m_accountID == 71) m_fields->m_isRobTop = true; // RobTop
 
+			// Check for mod badge states
+			m_fields->m_modState = p0->m_modBadge;
 			switch(m_fields->m_modState) {
 				case 1:
 					m_fields->m_modBadgeSprite = cocos2d::CCSprite::createWithSpriteFrameName("modBadge_01_001.png");
@@ -28,7 +34,7 @@ class $modify(ModBadgeInfoProfilePage, ProfilePage) {
 					break;
 			}
 
-			if (m_fields->m_modBadgeSprite) { // Check if it's not nullptr
+			if (m_fields->m_modBadgeSprite) { // Check if the sprite is not nullptr
     			auto modBadgeBtn = CCMenuItemSpriteExtra::create(
         			m_fields->m_modBadgeSprite,
 					this,
@@ -44,6 +50,7 @@ class $modify(ModBadgeInfoProfilePage, ProfilePage) {
 			}
 		}
 	};
+	
 	void onModBadgeBtn(CCObject*) {
 		if (m_fields->m_isRobTop) {
 			FLAlertLayer::create(
