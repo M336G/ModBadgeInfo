@@ -3,7 +3,7 @@
 class $modify(ModBadgeInfoProfilePage, ProfilePage) {
 	struct Fields {
 		int m_modState;
-		cocos2d::CCSprite* m_modBadgeSprite;
+		cocos2d::CCSprite* m_modBadgeSprite = nullptr;
 		bool m_isRobTop = false;
 	};
 	void loadPageFromUserInfo(GJUserScore* p0) {
@@ -11,7 +11,7 @@ class $modify(ModBadgeInfoProfilePage, ProfilePage) {
 
 		auto menu = static_cast<cocos2d::CCMenu*>(this->getChildByIDRecursive("username-menu"));
 
-  		if(auto modBadge = static_cast<cocos2d::CCSprite*>(menu->getChildByID("mod-badge"))) {
+  		if (auto modBadge = static_cast<cocos2d::CCSprite*>(menu->getChildByID("mod-badge"))) {
 			m_fields->m_modState = p0->m_modBadge;
 			
 			if (p0->m_accountID == 71) m_fields->m_isRobTop = true; // RobTop
@@ -28,18 +28,20 @@ class $modify(ModBadgeInfoProfilePage, ProfilePage) {
 					break;
 			}
 
-    		auto modBadgeBtn = CCMenuItemSpriteExtra::create(
-        		m_fields->m_modBadgeSprite,
-				this,
-				menu_selector(ModBadgeInfoProfilePage::onModBadgeBtn)
-    		);
+			if (m_fields->m_modBadgeSprite) { // Check if it's not nullptr
+    			auto modBadgeBtn = CCMenuItemSpriteExtra::create(
+        			m_fields->m_modBadgeSprite,
+					this,
+					menu_selector(ModBadgeInfoProfilePage::onModBadgeBtn)
+    			);
 
-			modBadgeBtn->setPosition(modBadge->getPosition());
-			modBadgeBtn->setID("mod-badge-btn"_spr);
-			menu->addChild(modBadgeBtn);
+				modBadgeBtn->setPosition(modBadge->getPosition());
+				modBadgeBtn->setID("mod-badge-btn"_spr);
+				menu->addChild(modBadgeBtn);
 
-			// Make the base non-clickable badge invisible without removing it from its parent to avoid breaking dependencies
-			modBadge->setVisible(false);
+				// Make the base non-clickable badge invisible without removing it from its parent to avoid breaking dependencies
+				modBadge->setVisible(false);
+			}
 		}
 	};
 	void onModBadgeBtn(CCObject*) {
