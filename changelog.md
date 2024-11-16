@@ -1,3 +1,6 @@
+# 1.1.1
+- Ported the mod to Geode 4.0.0-beta.1 (GD 2.2074)
+
 # 1.1.0
 - New logo by immortalbean!
 - Fixed mod badge duplicating itself at each page reload

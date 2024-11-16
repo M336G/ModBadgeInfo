@@ -55,7 +55,7 @@ class $modify(ModBadgeInfoProfilePage, ProfilePage) {
 		if (m_fields->m_isRobTop) {
 			FLAlertLayer::create(
 				"RobTop!", 
-				"This is <cb>RobTop</c>, the owner of <cy>Geometry Dash</c>. They can do <co>anything they want</c>!", 
+				"This is <cb>RobTop</c>, the owner and creator of <cy>Geometry Dash</c>. They can do <co>anything they want</c>!", 
 				"OK"
 			)->show();
 			return;
