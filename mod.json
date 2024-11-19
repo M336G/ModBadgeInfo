@@ -32,12 +32,12 @@
 		{
 			"id": "m336.levelinfo",
 			"version": ">=1.3.8",
-			"importance": "recommended"
+			"importance": "suggested"
 		},
 		{
 			"id": "m336.autoleaderboard",
 			"version": ">=1.0.0",
-			"importance": "recommended"
+			"importance": "suggested"
 		}
 	]
 }
