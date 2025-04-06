@@ -1,3 +1,7 @@
+# 1.1.2
+- Added iOS compatibility (still experimental)
+- Fixed the mod downloading AutoLeaderboard & Level Info even though they aren't required
+
 # 1.1.1
 - Ported the mod to Geode 4.0.0-beta.1 (GD 2.2074)
 
