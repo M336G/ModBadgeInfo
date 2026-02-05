@@ -1,5 +1,5 @@
 # Mod Badge Info
-A mod that lets you click mod badges to see what they do
+Lets you click mod badges to see what they do!
 
 ----------
 

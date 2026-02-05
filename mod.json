@@ -1,20 +1,19 @@
 {
-	"geode": "4.3.1",
+	"geode": "5.0.0-alpha.1",
 	"gd": {
-		"win": "2.2074",
-		"android": "2.2074",
-		"mac": "2.2074",
-		"ios": "2.2074"
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
 	},
 	"id": "m336.modbadgeinfo",
 	"name": "Mod Badge Info",
-	"version": "v1.1.2-beta.1",
+	"version": "v1.1.2",
 	"developer": "M336",
-	"description": "A mod that lets you click mod badges to see what they do",
+	"description": "Lets you click mod badges to see what they do",
 	"links": {
 		"source": "https://github.com/M336G/ModBadgeInfo"
 	},
-	"repository": "https://github.com/M336G/ModBadgeInfo",
 	"issues": {
 		"info": "Having a problem with the mod? Report the issue on the GitHub repository",
 		"url": "https://github.com/M336G/ModBadgeInfo/issues"
@@ -23,22 +22,19 @@
 		"utility",
 		"interface"
 	],
-	"dependencies": [
-		{
-            "id": "geode.node-ids",
+	"dependencies": {
+		"geode.node-ids": {
             "version": ">=v1.12.0",
             "importance": "required"
         },
 
-		{
-			"id": "m336.levelinfo",
+		"m336.levelinfo": {
 			"version": ">=1.3.8",
 			"importance": "suggested"
 		},
-		{
-			"id": "m336.autoleaderboard",
+		"m336.autoleaderboard": {
 			"version": ">=1.0.0",
 			"importance": "suggested"
 		}
-	]
+	}
 }
