@@ -5,8 +5,6 @@ Lets you click mod badges to see what they do!
 
 ### If you want to help me improve the mod, feel free to open a [pull request](https://github.com/M336G/ModBadgeInfo/pulls) on GitHub!
 
-Clickable mod badges in comments will be done later on
-
 ----------
 
 ## Credits

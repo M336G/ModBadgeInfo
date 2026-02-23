@@ -1,3 +1,7 @@
+# 1.2.0
+- Made mod badges in comments clickable too!
+- Rewrote the codebase (pretty much entirely)
+
 # 1.1.3
 - Version bump Geode to v5.0.0
 - Temporarily removed suggested mods
