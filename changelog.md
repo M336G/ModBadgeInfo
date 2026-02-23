@@ -1,3 +1,7 @@
+# 1.1.3
+- Version bump Geode to v5.0.0
+- Temporarily removed suggested mods
+
 # 1.1.2
 - Added iOS compatibility (still experimental)
 - Fixed the mod downloading AutoLeaderboard & Level Info even though they aren't required
