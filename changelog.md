@@ -1,3 +1,8 @@
+# 1.2.1
+- Fixed mod badges appearing twice on reload
+- Fixed mod badges appearing multiple times and having unclickable duplicates with BadgesAPI
+- Some small improvements to the code
+
 # 1.2.0
 - Made mod badges in comments clickable too!
 - Rewrote the codebase (pretty much entirely)

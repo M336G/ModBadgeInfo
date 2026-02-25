@@ -11,39 +11,36 @@ class $modify(MyCommentCell, CommentCell) {
 		CommentCell::loadFromComment(comment);
 
 		// Get the original mod badge
-		auto layer = this->getChildByIndex(1);
-		if (!layer) return;
-		auto mainMenu = layer->getChildByID("main-menu");
-		if (!mainMenu) return;
-		auto userMenu = mainMenu->getChildByID("user-menu");
-		if (!userMenu) return;
-		auto usernameMenu = userMenu->getChildByID("username-menu");
-		if (!usernameMenu) return;
-		auto modBadge = usernameMenu->getChildByID("mod-badge");
+		auto *layer = this->m_mainLayer;
+		auto *menu = static_cast<cocos2d::CCMenu *>(layer->getChildByIDRecursive("username-menu"));
+		if (!menu) return;
+		auto *modBadge = static_cast<cocos2d::CCSprite *>(menu->getChildByIDRecursive("mod-badge"));
 		if (!modBadge) return;
+
+		// If the badge's already there after a reload, delete it and continue
+		if (auto *modBadgeBtnDupe = static_cast<CCMenuItemSpriteExtra *>(menu->getChildByIDRecursive("mod-badge-button"_spr))) {
+			modBadgeBtnDupe->removeFromParentAndCleanup(true);
+			menu->updateLayout();
+		}
 
 		// Change these fields accordingly
 		m_fields->m_modState = comment->m_modBadge;
 		m_fields->m_isRobTop = comment->m_accountID == ModHelper::robTopAccountID && comment->m_userID == ModHelper::robTopUserID;
 
-		// Create the new sprite according to the modBadge value we got
-		auto modBadgeSpr = ModHelper::createModBadgeSprite(m_fields->m_modState);
-		modBadgeSpr->setScale(modBadge->getScale());
+		// Store the original mod badge position and remove it from the menu
+        auto modBadgePosition = modBadge->getPosition();
+        modBadge->removeFromParent();
 
 		// Create the actual clickable button
-		auto modBadgeBtn = CCMenuItemSpriteExtra::create(
-			modBadgeSpr,
+		auto *modBadgeBtn = CCMenuItemSpriteExtra::create(
+			modBadge,
 			this,
 			menu_selector(MyCommentCell::onModBadgeBtn)
 		);
-
-		modBadgeBtn->setID("mod-badge-button"_spr);
-		modBadgeBtn->setPosition(modBadge->getPosition());
-		usernameMenu->addChild(modBadgeBtn);
-
-		// Keep the original badge but make it invisible to avoid issues with other
-		// mods depending on it
-		modBadge->setVisible(false);
+        modBadgeBtn->setID("mod-badge-button"_spr);
+        modBadgeBtn->setPosition(modBadgePosition);
+		
+		menu->addChild(modBadgeBtn);
 	};
 
 	void onModBadgeBtn(CCObject *) {
