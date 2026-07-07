@@ -1,3 +1,7 @@
+# 1.3.0
+- Added compatibility for Badgify
+- Improved some parts of the codebase
+
 # 1.2.1
 - Fixed mod badges appearing twice on reload
 - Fixed mod badges appearing multiple times and having unclickable duplicates with BadgesAPI
