@@ -4,10 +4,10 @@
 using namespace geode::prelude;
 
 std::unordered_map<std::string, std::string> const ModHelper::badgeDescriptions = {
-    { "robtop", "This is <cb>RobTop</c>, the owner and creator of <cy>Geometry Dash</c>. They can do <co>anything they want</c>!" },
-    { "leaderboard-moderator", "This user is a <cy>Geometry Dash</c> <cj>Leaderboard Moderator</c>! They moderate the <co>Top 100 Leaderboard</c>, the <co>Global Leaderboard</c> and <co>level-specific leaderboards</c>." },
-    { "elder-moderator", "This user is a <cy>Geometry Dash</c> <cr>Elder Moderator</c>! They can <co>moderate comments</c>, <co>whitelist Newgrounds artists</c>, <co>unlock updates for old rated levels</c>, and <co>suggest levels</c> to <cb>RobTop</c>." },
-    { "moderator", "This user is a <cy>Geometry Dash</c> <cg>Moderator</c>! They can <co>suggest levels</c> to <cb>RobTop</c>." }
+    { "robtop", "This is <cb>RobTop</c>, the <cy>owner & creator of Geometry Dash</c>.\nHe can do <cl>anything he wants</c>!" },
+    { "leaderboard-moderator", "This is a <cj>Leaderboard Moderator</c>!\nThey moderate the <cc>Top 1000 whitelist</c>, <cs>Global & level leaderboards</c>, and can <cr>ban players from them</c>. They also have <cr>more power when voting for Demon ratings</c>.\nThis role can <co>only</c> be granted by <cb>RobTop</c>!" },
+    { "elder-moderator", "This is an <cr>Elder Moderator</c>!\nThey <cl>suggest levels they find good</c> to <cb>RobTop</c> to be rated, <cr>moderate comments</c>, <cc>whitelist Newgrounds artists</c>, <cf>unlock updates for old rated levels</c>, and more. They have the <cl>same rating power as regular Moderators</c>.\nThis role can <co>only</c> be granted by <cb>RobTop</c>!" },
+    { "moderator", "This is a <cs>Moderator</c>!\nThey can <cl>suggest levels they find good</c> to <cb>RobTop</c> to be rated and have <cr>more power when voting for Demon ratings</c>.\nThis role can <co>only</c> be granted by <cb>RobTop</c>!" }
 };
 
 bool ModHelper::isBadgifyLoaded() {

@@ -1,3 +1,6 @@
+# 1.3.1
+- Improved badges' descriptions, more according to the [Geometry Dash FAQ](https://www.robtopgames.com/faq/en/answers/moderator/)
+
 # 1.3.0
 - Added compatibility for Badgify
 - Improved some parts of the codebase
