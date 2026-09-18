@@ -8,10 +8,11 @@
 	},
 	"id": "m336.modbadgeinfo",
 	"name": "Mod Badge Info",
-	"version": "v1.3.1",
+	"version": "v1.3.2",
 	"developer": "M336",
 	"description": "Lets you click mod badges to see what they do",
 	"links": {
+		"community": "https://discord.gg/adbqkyvbZa",
 		"source": "https://github.com/M336G/ModBadgeInfo"
 	},
 	"issues": {
@@ -24,6 +25,6 @@
 	],
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.0",
-		"alphalaneous.badgify": { "version": ">=v1.0.2", "required": false }
+		"dasshu.badgified": { "version": ">=v1.0.3", "required": false }
 	}
 }

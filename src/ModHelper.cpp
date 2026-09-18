@@ -15,6 +15,11 @@ bool ModHelper::isBadgifyLoaded() {
     return isBadgifyLoaded;
 }
 
+bool ModHelper::isBadgifiedLoaded() {
+    static bool isBadgifiedLoaded = Loader::get()->isModLoaded("dasshu.badgified");
+    return isBadgifiedLoaded;
+}
+
 void ModHelper::showModBadgeAlert(int modState, bool isRobTop) {
     std::string name;
     std::string description;

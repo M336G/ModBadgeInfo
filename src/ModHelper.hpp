@@ -8,5 +8,6 @@ public:
     static const std::unordered_map<std::string, std::string> badgeDescriptions;
 
     static bool isBadgifyLoaded();
+    static bool isBadgifiedLoaded();
     static void showModBadgeAlert(int modState, bool isRobTop);
 };

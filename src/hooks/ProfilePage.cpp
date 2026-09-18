@@ -13,7 +13,7 @@ class $modify(MyProfilePage, ProfilePage) {
 	void loadPageFromUserInfo(GJUserScore *score) {
 		ProfilePage::loadPageFromUserInfo(score);
 
-		if (ModHelper::isBadgifyLoaded())
+		if (ModHelper::isBadgifiedLoaded() || ModHelper::isBadgifyLoaded())
 			return;
 
 		// Get the original mod badge

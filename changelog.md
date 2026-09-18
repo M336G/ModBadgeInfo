@@ -1,3 +1,7 @@
+# 1.3.2
+- Switched Alphalaneous' Badgify soft-dependency to Dasshu's Badgified
+    - From now on, using Badgify to display badges will simply not work and the mod will prompt you to use Badgified instead
+
 # 1.3.1
 - Improved badges' descriptions, more according to the [Geometry Dash FAQ](https://www.robtopgames.com/faq/en/answers/moderator/)
 

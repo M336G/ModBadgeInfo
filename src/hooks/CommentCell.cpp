@@ -13,7 +13,7 @@ class $modify(MyCommentCell, CommentCell) {
 	void loadFromComment(GJComment *comment) {
 		CommentCell::loadFromComment(comment);
 
-		if (ModHelper::isBadgifyLoaded())
+		if (ModHelper::isBadgifiedLoaded() || ModHelper::isBadgifyLoaded())
 			return;
 
 		// Get the original mod badge
