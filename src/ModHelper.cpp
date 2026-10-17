@@ -6,8 +6,8 @@ using namespace geode::prelude;
 std::unordered_map<std::string, std::string> const ModHelper::badgeDescriptions = {
     { "robtop", "This is <cb>RobTop</c>, the <cy>owner & creator of Geometry Dash</c>.\nHe can do <cl>anything he wants</c>!" },
     { "leaderboard-moderator", "This is a <cj>Leaderboard Moderator</c>!\nThey moderate the <cc>Top 1000 whitelist</c>, <cs>Global & level leaderboards</c>, and can <cr>ban players from them</c>. They also have <cr>more power when voting for Demon ratings</c>.\nThis role can <co>only</c> be granted by <cb>RobTop</c>!" },
-    { "elder-moderator", "This is a <cr>Moderator</c>!\nThey <cl>suggest levels they find good</c> to <cb>RobTop</c> to be rated, <cr>moderate comments</c>, <cc>whitelist Newgrounds artists</c>, <cf>unlock updates for old rated levels</c>, and more. They have the <cl>same rating power as Rating Advisors</c>.\nThis role can <co>only</c> be granted by <cb>RobTop</c>!" },
-    { "moderator", "This is a <cs>Rating Advisor</c>!\nThey can <cl>suggest levels they find good</c> to <cb>RobTop</c> to be rated and have <cr>more power when voting for Demon ratings</c>.\nThis role can <co>only</c> be granted by <cb>RobTop</c>!" }
+    { "moderator", "This is a <cr>Moderator</c>!\nThey <cl>suggest levels they find good</c> to <cb>RobTop</c> to be rated, <cr>moderate comments</c>, <cc>whitelist Newgrounds artists</c>, <cf>unlock updates for old rated levels</c>, and more. They have the <cl>same rating power as Rating Advisors</c>.\nThis role can <co>only</c> be granted by <cb>RobTop</c>!" },
+    { "rating-advisor", "This is a <cs>Rating Advisor</c>!\nThey can <cl>suggest levels they find good</c> to <cb>RobTop</c> to be rated and have <cr>more power when voting for Demon ratings</c>.\nThis role can <co>only</c> be granted by <cb>RobTop</c>!" }
 };
 
 bool ModHelper::isBadgifyLoaded() {
@@ -31,11 +31,11 @@ void ModHelper::showModBadgeAlert(int modState, bool isRobTop) {
         switch (modState) {
             case 1:
                 name = "Rating Advisor!";
-                description = badgeDescriptions.at("moderator");
+                description = badgeDescriptions.at("rating-advisor");
                 break;
             case 2:
                 name = "Moderator!";
-                description = badgeDescriptions.at("elder-moderator");
+                description = badgeDescriptions.at("moderator");
                 break;
             case 3:
                 name = "Leaderboard Moderator!";
