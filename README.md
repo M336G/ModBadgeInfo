@@ -1,3 +1,6 @@
+> [!WARNING]
+> This mod has been deprecated, as its feature has *officially* been implemented in 2.209 :)
+
 # Mod Badge Info
 Lets you click mod badges to see what they do!
 
@@ -9,5 +12,6 @@ Lets you click mod badges to see what they do!
 
 ## Credits
 [Roxi (Uproxide)](https://github.com/Uproxide) (for helping me improve/resolve problems with my code)
+
 
 Thanks to [immortalbean](https://github.com/immortalbean) for the logo!
